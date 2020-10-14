@@ -1,0 +1,20 @@
+.tb {
+	border-collapse: collapse;
+	margin-top: 20px;
+	width: 200px;
+}
+.tb td {
+	text-align: left;
+}
+
+/*pseudo class*/
+
+h1:hover{
+	color: #355388;
+	background-color: #fff;
+}
+
+/*pseudo element*/
+.tb tr:nth-child(odd) {
+	background-color: #CCC;
+}
