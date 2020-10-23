@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan js 9</title>
+</head>
+<body>
+	<form name="test" onsubmit="checkemail(this.test2.value); return false">
+		<input type="text" size="20" name="test2">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+	function checkemail(email) {
+		// pengecekkan kondisi untuk inputan yang menggunakan @ dan .
+		if (email.indexOf("@") !=-1 && email.indexOf(".") !=-1) {
+			alert("Apakah alamat email sudah benar?");
+		} else {
+			alert("Penulisan email salah");
+		}
+	}
+</script>
