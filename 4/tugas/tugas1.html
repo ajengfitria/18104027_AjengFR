@@ -1,0 +1,40 @@
+<!-- this code was written by Ajeng Fitria / 18104027 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan jQuery 1</title>
+  </head>
+  <body>
+    <h1 id="klik">Clik this to hide this text</h1>
+
+    <p>Ciao adios!</p>
+
+    <input type="text" name="nama" id="teks" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // jika dokumen sudah ready
+      $(document).ready(function () {
+
+        // menambah event listener click pada id klik
+        $("#klik").on("click", function () {
+          // untuk menyembunyikan objek pada id klik
+          $(this).hide();
+        });
+
+        // menambah event listener hover pada tag p
+        $("p").hover(function () {
+          // menyembunyikan objik di dalam tag p
+          $(this).hide();
+        });
+
+        // menambah event listener focus pada is teks
+        $("#teks").focus(function () {
+          // menambah pengaturan css
+          $(this).css("width", "500px");
+        });
+      });
+    </script>
+  </body>
+</html>

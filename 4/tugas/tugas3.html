@@ -1,0 +1,35 @@
+<!-- this code was written by Ajeng Fitria / 18104027 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan jQuery 3</title>
+  </head>
+  <body>
+    <label for="bil1">Masukkan bilangan ke-1</label>
+    <input type="number" name="bil1" id="bil1" />
+
+    <label for="bil2">Masukkan bilangan ke-2</label>
+    <input type="number" name="bil2" id="bil2" />
+
+    <input type="button" value="Tambah" id="btnTambah" />
+
+    <!-- load lib jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+      // menambah event listener onclick pada tag btnTambah
+      $("#btnTambah").on("click", function () {
+        //mengambil nilai dari bilangan yg diinputkan
+        let bil1 = $("#bil1").val();
+        let bil2 = $("#bil2").val();
+
+        //menjumlahkan bilangan
+        let hasil = parseInt(bil1) + parseInt(bil2);
+
+        //menampilkan hasil penjumlahan
+        alert("Hasil : " + hasil);
+      });
+    </script>
+  </body>
+</html>

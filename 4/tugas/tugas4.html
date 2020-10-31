@@ -1,0 +1,33 @@
+<!-- this code was written by Ajeng Fitria / 18104027 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan jQuery 4</title>
+    <style>
+      .berubah {
+        color: #f0f;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quod minima,
+      pariatur magnam reprehenderit voluptas ipsum sequi tenetur? Consequuntur,
+      ipsum perferendis. Iure vero voluptate, vitae fuga cupiditate eligendi
+      quasi ea?
+    </p>
+    <button>Berubah</button>
+    <!-- laod lib jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+      //menambah event listener onclick pada id button
+      $("button").on("click", function () {
+        // toggle class berubah pada tag p
+        $("p").toggleClass("berubah");
+      });
+    </script>
+  </body>
+</html>

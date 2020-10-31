@@ -1,0 +1,36 @@
+<!-- this code was written by Ajeng Fitria / 18104027 -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Latihan jQuery 2</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quaerat non
+      minus, obcaecati est porro iste impedit dolore maiores quae, molestias
+      consequatur fugiat! Deserunt, inventore obcaecati perferendis modi
+      architecto sint!
+    </p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <!-- load library jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+      // menambah event listener onclick pada id p
+      $("#hide").on("click", function () {
+        // menyembunyikan objek pada id p dengan durasi 1 detik
+        $("p").hide(1000);
+      });
+
+      // menambah event listener onclick pada id  p
+      $("#show").on("click", function () {
+        //menampilkan objek dengan durasi 1 detik
+        $("p").show(1000);
+      });
+    </script>
+  </body>
+</html>
