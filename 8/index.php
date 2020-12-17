@@ -71,6 +71,15 @@
                                 <h4><?= $dt['nama'];?></h4>
                             </div>
                             <div class="col-md-6">
+                                <img src="img/<?= $dt['foto'];?>" class="rounded-circle float-right d-block img-fluid" alt="<?= $dt['nama'];?>" style="width: 50px; height: 50px;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><?= $dt['alamat'];?></p>
+                            </div>
+                            <div class="col-md-6">
                                 <a class="float-right ml-3 text-danger" href="hapus_data.php?id=<?php echo $dt['id'] ?>" type="button" class="close">
                                     <span class="fa fa-trash"></span>
                                 </a>
@@ -78,11 +87,6 @@
                                     <span class="fa fa-edit"></span>
                                 </a>
                                 <p class="text-right"><?= $dt['kelas'];?></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p><?= $dt['alamat'];?></p>
                             </div>
                         </div>
                     </div>

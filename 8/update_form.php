@@ -53,8 +53,10 @@
                         <input type="text" name="alamat" placeholder="Alamat" class="form-control" value="<?= $view['alamat']; ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="foto">Pas Foto</label>
-                        <input type="file" name="foto" id="foto" class="form-control-file" value="<?= $view['foto']; ?>" required>
+                        <label for="foto">Pas Foto</label><br>
+                        </a><img src="img/<?= $view['foto'];?>" class="rounded-circle mx-auto d-block img-fluid" alt="<?= $view['nama'];?>" style="width: 100px; height: 100px;">
+                        <br>
+                        <input type="file" name="foto" id="foto" class="form-control-file" value="<?php echo $view['foto']; ?>" required>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block">Edit</button>
@@ -80,6 +82,15 @@
                                 <h4><?= $dt['nama'];?></h4>
                             </div>
                             <div class="col-md-6">
+                                <img src="img/<?= $dt['foto'];?>" class="rounded-circle float-right d-block img-fluid" alt="<?= $dt['nama'];?>" style="width: 50px; height: 50px;">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><?= $dt['alamat'];?></p>
+                            </div>
+                            <div class="col-md-6">
                                 <a class="float-right ml-3 text-danger" href="hapus_data.php?id=<?php echo $dt['id'] ?>" type="button" class="close">
                                     <span class="fa fa-trash"></span>
                                 </a>
@@ -87,11 +98,6 @@
                                     <span class="fa fa-edit"></span>
                                 </a>
                                 <p class="text-right"><?= $dt['kelas'];?></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p><?= $dt['alamat'];?></p>
                             </div>
                         </div>
                     </div>

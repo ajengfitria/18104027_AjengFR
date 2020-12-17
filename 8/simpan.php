@@ -16,10 +16,8 @@ $foto = basename($_FILES["foto"]["name"]);
 if(isset($_POST['id'])) {
 	$check = getimagesize($_FILES["foto"]["tmp_name"]);
 	if($check !== false) {
-		create_message('File is an image.','danger','warning');
-		header("location:".$_SERVER['HTTP_REFERER']);
-		$error = false; 
-		exit(); 
+		echo "File is an image - " . $check["mime"] . "."; 
+            $error = false; 
 	} else {
 		create_message('File is not an image.','danger','warning');
 		header("location:".$_SERVER['HTTP_REFERER']);
@@ -76,10 +74,8 @@ if(isset($_POST['id'])) {
 	}
 } else {
 	if($check !== false) {
-		create_message('File is an image.','danger','warning');
-		header("location:".$_SERVER['HTTP_REFERER']);
-		$error = false; 
-		exit(); 
+		echo "File is an image - " . $check["mime"] . "."; 
+            $error = false; 
 	} else {
 		create_message('File is not an image.','danger','warning');
 		header("location:".$_SERVER['HTTP_REFERER']);
