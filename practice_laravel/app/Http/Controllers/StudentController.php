@@ -57,4 +57,11 @@ class StudentController extends Controller
 
     	return redirect(route('student.index'))->with('pesan','Data berhasil diupdate');
     }
+
+    public function destroy($id) {
+    	$student = Student::find($id);
+    	$student->delete();
+
+    	return redirect(route('student.index'))->with('pesan','Data berhasil dihapus')
+    }
 }

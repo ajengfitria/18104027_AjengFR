@@ -19,12 +19,20 @@ Route::get('/','MyController@index')->name('index');
 //memanggil method about dari MyController
 Route::get('/tentang','MyController@about')->name('about');
 
+//memanggil method index dari StudentController
 Route::get('/mahasiswa','StudentController@index')->name('student.index');
 
+//memanggil method create dari StudentController
 Route::get('/mahasiswa/tambah','StudentController@create')->name('student.create');
 
+//memanggil method store dari StudentController
 Route::post('/mahasiswa/tambah','StudentController@store')->name('student.store');
 
+//memanggil method edit dari StudentController
 Route::get('/mahasiswa/edit/{id}','StudentController@edit')->name('student.edit');
 
+//memanggil method update dari StudentController
 Route::get('/mahasiswa/edit/{id}','StudentController@update')->name('student.update');
+
+//memanggil method destroy dari StudentController
+Route::get('/mahasiswa/hapus/{id}','StudentController@destroy')->name('student.destroy');
