@@ -24,3 +24,7 @@ Route::get('/mahasiswa','StudentController@index')->name('student.index');
 Route::get('/mahasiswa/tambah','StudentController@create')->name('student.create');
 
 Route::post('/mahasiswa/tambah','StudentController@store')->name('student.store');
+
+Route::get('/mahasiswa/edit/{id}','StudentController@edit')->name('student.edit');
+
+Route::get('/mahasiswa/edit/{id}','StudentController@update')->name('student.update');

@@ -37,4 +37,24 @@ class StudentController extends Controller
 
     	return redirect(route('student.index'))->with('pesan','Data Berhasil ditambahkan');
     }
+
+    public function update(Request $request, $id) {
+    	$request->validate([
+    		'nim' => 'required|size:8,unique:students',
+    		'name' => 'required|min:3|max50',
+    		'gender' => 'required|in:P,L',
+    		'departement' => 'required',
+    		'address' => '',
+    	]);
+
+    	$student = Student::find($id);
+    	$student->nim = $request->nim;
+    	$student->nama = $request->nama;
+    	$student->gender = $request->gender;
+    	$student->departement = $request->departement;
+    	$student->address = $request->address;
+    	$student->save();
+
+    	return redirect(route('student.index'))->with('pesan','Data berhasil diupdate');
+    }
 }
