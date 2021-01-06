@@ -32,7 +32,7 @@ Route::post('/mahasiswa/tambah','StudentController@store')->name('student.store'
 Route::get('/mahasiswa/edit/{id}','StudentController@edit')->name('student.edit');
 
 //memanggil method update dari StudentController
-Route::get('/mahasiswa/edit/{id}','StudentController@update')->name('student.update');
+Route::put('/mahasiswa/edit/{id}','StudentController@update')->name('student.update');
 
 //memanggil method destroy dari StudentController
-Route::get('/mahasiswa/hapus/{id}','StudentController@destroy')->name('student.destroy');
+Route::delete('/mahasiswa/hapus/{id}','StudentController@destroy')->name('student.destroy');

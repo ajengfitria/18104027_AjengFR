@@ -8,11 +8,11 @@ class MyController extends Controller
 {
     //membuat function untuk view beranda
     public function index() {
-    	return view('beranda');
+    	return view('template.beranda');
     }
 
     //function untuk menampilkan view about
     public function about() {
-    	return view('about');
+    	return view('template.about');
     }
 }
