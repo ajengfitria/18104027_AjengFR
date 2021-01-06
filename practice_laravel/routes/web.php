@@ -36,3 +36,10 @@ Route::put('/mahasiswa/edit/{id}','StudentController@update')->name('student.upd
 
 //memanggil method destroy dari StudentController
 Route::delete('/mahasiswa/hapus/{id}','StudentController@destroy')->name('student.destroy');
+
+//memanggil method data dari StudentController
+Route::get('mahasiswa/data','StudentController@data')->name('student.data');
+
+
+//memanggil method data_destroy dari StudentController
+Route::get('mahasiswa/data/hapus/{id}','StudentController@data_destroy')->name('student.data.destroy');
