@@ -38,7 +38,7 @@ class StudentController extends Controller
 
     	return redirect(route('student.index'))->with('pesan','Data Berhasil ditambahkan');
     }
-
+ 
     public function edit($id) {
     	$data['gender'] = ['L','P'];
     	$data['departement'] = ['S1 RPL', 'S1 Informatika', 'S1 Sistem Informasi'];
