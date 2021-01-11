@@ -78,7 +78,7 @@ class StudentController extends Controller
     public function data(Request $request) {
         if ($request->ajax()) {
             $data = Student::all();
-            return DataTables::of($data)
+            return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
                     $btn = '
@@ -92,7 +92,7 @@ class StudentController extends Controller
                 ';
                 return $btn;
             })
-            ->rawColumn(['action'])
+            ->rawColumns(['action'])
             ->make(true);
         }
 
